@@ -84,13 +84,13 @@ var services = []*service{
 		},
 		SCPD: contentDirectoryServiceDescription,
 	},
-	// {
-	// 	Service: upnp.Service{
-	// 		ServiceType: "urn:schemas-upnp-org:service:ConnectionManager:3",
-	// 		ServiceId:   "urn:upnp-org:serviceId:ConnectionManager",
-	// 	},
-	// 	SCPD: connectionManagerServiceDesc,
-	// },
+	{
+		Service: upnp.Service{
+			ServiceType: "urn:schemas-upnp-org:service:ConnectionManager:3",
+			ServiceId:   "urn:upnp-org:serviceId:ConnectionManager",
+		},
+		SCPD: connectionManagerServiceDesc,
+	},
 }
 
 // The control URL for every service is the same. We're able to infer the desired service from the request headers.
@@ -775,12 +775,20 @@ func (server *Server) initMux(mux *http.ServeMux) {
 }
 
 func (s *Server) initServices() (err error) {
-	urn, err := upnp.ParseServiceType(services[0].ServiceType)
+	urn1, err := upnp.ParseServiceType(services[0].ServiceType)
 	if err != nil {
 		return
 	}
+	urn2, err := upnp.ParseServiceType(services[1].ServiceType)
+	if err != nil {
+		return
+	}
+	_ = urn2
 	s.services = map[string]UPnPService{
-		urn.Type: &contentDirectoryService{
+		urn1.Type: &contentDirectoryService{
+			Server: s,
+		},
+		urn2.Type: &fakeContentManagerService{
 			Server: s,
 		},
 	}
