@@ -22,9 +22,9 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/nfnt/resize"
 	"github.com/anacrolix/dms/dlna/dms"
 	"github.com/anacrolix/dms/rrcache"
-	"github.com/nfnt/resize"
 )
 
 type dmsConfig struct {

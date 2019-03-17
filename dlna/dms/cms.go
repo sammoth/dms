@@ -2,7 +2,7 @@ package dms
 
 import (
 	"net/http"
-	"github.com/anacrolix/dms/upnp"
+	"github.com/kostin88/dms/upnp"
 )
 
 type fakeContentManagerService struct {

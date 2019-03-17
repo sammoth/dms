@@ -12,10 +12,10 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/anacrolix/dms/dlna"
-	"github.com/anacrolix/dms/misc"
-	"github.com/anacrolix/dms/upnp"
-	"github.com/anacrolix/dms/upnpav"
+	"github.com/kostin88/dms/dlna"
+	"github.com/kostin88/dms/misc"
+	"github.com/kostin88/dms/upnp"
+	"github.com/kostin88/dms/upnpav"
 	"github.com/anacrolix/ffprobe"
 )
 

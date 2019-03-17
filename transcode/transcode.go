@@ -10,7 +10,7 @@ import (
 	"strconv"
 	"time"
 
-	. "github.com/anacrolix/dms/misc"
+	. "github.com/kostin88/dms/misc"
 	"github.com/anacrolix/ffprobe"
 )
 

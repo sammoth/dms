@@ -21,12 +21,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/anacrolix/dms/dlna"
-	"github.com/anacrolix/dms/soap"
-	"github.com/anacrolix/dms/ssdp"
-	"github.com/anacrolix/dms/transcode"
-	"github.com/anacrolix/dms/upnp"
-	"github.com/anacrolix/dms/upnpav"
+	"github.com/kostin88/dms/dlna"
+	"github.com/kostin88/dms/soap"
+	"github.com/kostin88/dms/ssdp"
+	"github.com/kostin88/dms/transcode"
+	"github.com/kostin88/dms/upnp"
+	"github.com/kostin88/dms/upnpav"
 	"github.com/anacrolix/ffprobe"
 )
 
